@@ -1,0 +1,12 @@
+.form {
+  width: max-content;
+  padding: 10px;
+  border: black 1px solid;
+  &.ng-invalid:not(.ng-untouched) {
+    border: red 1px solid;
+  }
+
+  &.ng-valid {
+    border: rgb(112, 248, 112) 1px solid;
+  }
+}

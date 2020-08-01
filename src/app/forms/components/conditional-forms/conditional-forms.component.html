@@ -1,14 +1,18 @@
-<form>
+<form class="form" [formGroup]="numberForm">
   <div>
-    <label for="">Telefono 1</label>
-    <input type="text">
+    <label for="">Numero 1</label>
+    <input type="text" formControlName="numberOne">
   </div>
   <div>
-    <label for="">Telefono 2</label>
-    <input type="text">
+    <label for="">Numero 2</label>
+    <input type="text" formControlName="numberTwo">
   </div>
   <div>
-    <label for="">Telefono 3</label>
-    <input type="text">
+    <label for="">Numero 3</label>
+    <input type="text" formControlName="numberTree">
   </div>
 </form>
+
+<div>
+  El formulario es: {{numberForm.valid ? 'Valido' : 'No valido'}}
+</div>
