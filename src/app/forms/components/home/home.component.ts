@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LinkCard } from 'src/app/core';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  linkCards: LinkCard[] = [
+    {title: 'Validaciones condicionales', url: 'conditionalForms'}
+  ];
 
   constructor() { }
 

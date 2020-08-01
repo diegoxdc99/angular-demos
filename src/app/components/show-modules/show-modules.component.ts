@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LinkCard } from 'src/app/core';
 
 @Component({
   selector: 'app-show-modules',
@@ -6,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-modules.component.scss']
 })
 export class ShowModulesComponent implements OnInit {
-  linkCards: LinkCards[] = [
+  linkCards: LinkCard[] = [
     {title: 'Formularios', url: '/forms'}
-  ]
+  ];
 
   constructor() { }
 
