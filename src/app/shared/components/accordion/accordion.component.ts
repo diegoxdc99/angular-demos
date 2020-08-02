@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, HostBinding, OnDestroy } from '@angular/core';
 import { accordionAnimations } from './accordion-animations';
 import { UniqueSelectionDispatcherService } from 'src/app/core/services/unique-selection-dispatcher.service';
 let counter = 0;
@@ -6,7 +6,6 @@ let counter = 0;
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [accordionAnimations.bodyExpansion]
 })
 export class AccordionComponent implements OnInit, OnDestroy {
