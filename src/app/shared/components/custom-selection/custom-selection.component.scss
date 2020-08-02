@@ -1,0 +1,17 @@
+.container {
+  border: blue 2px solid;
+  .search {
+    margin-left: 50px;
+  }
+}
+
+
+.input-empty {
+  box-sizing: content-box;
+  background: none transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  cursor: default;
+  width: 100%;
+}
