@@ -8,7 +8,8 @@ import { LinkCard } from 'src/app/core';
 })
 export class ShowModulesComponent implements OnInit {
   linkCards: LinkCard[] = [
-    {title: 'Formularios', url: '/forms'}
+    {title: 'Formularios', url: '/forms'},
+    {title: 'Animaciones', url: '/animations'}
   ];
 
   constructor() { }

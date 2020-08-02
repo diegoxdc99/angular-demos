@@ -1,0 +1,47 @@
+:host {
+  $border-radius: 4px;
+
+  box-sizing: content-box;
+  display: block;
+  margin: 0;
+
+  overflow: hidden;
+  transition: margin 225ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:first-of-type {
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+  }
+
+  &:last-of-type {
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  &.expanded {
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header {
+  background-color: rgba($color: #e48c8c, $alpha: 1.0);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background: rgba(#996565, 1.0);
+
+  .body {
+    padding: 20px 24px 16px;
+  }
+}

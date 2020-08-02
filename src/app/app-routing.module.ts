@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { ShowModulesComponent } from './components/show-modules/show-modules.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -17,13 +16,13 @@ const routes: Routes = [
         path: 'forms',
         loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule)
       },
-      // {
-      //   path: 'orders',
-      //   loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule)
-      // },
+      {
+        path: 'animations',
+        loadChildren: () => import('./animations/animations.module').then(m => m.AnimationsModule)
+      },
       {
         path: '**',
-        redirectTo: 'products',
+        redirectTo: '',
         pathMatch: 'full'
       }
     ]
