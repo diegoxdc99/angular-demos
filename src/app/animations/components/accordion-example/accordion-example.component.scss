@@ -1,3 +1,5 @@
+
+
 .header {
   display: flex;
   flex-flow: row wrap;
@@ -14,4 +16,43 @@
     font-size: 1rem;
   }
 
+}
+
+// .wrapper {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+
+
+//     width: 100%;
+//     height: 100%;
+//   .container {
+//     background: rgb(228, 228, 228);
+//     padding: 20px;
+//     border-radius: 5px;
+//     width: 50%;
+//     height: 50%;
+
+//     .accordion-group {
+//       width: 100%;
+//     }
+//   }
+// }
+
+
+.wrapper {
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: rgb(228, 228, 228);
+    padding: 20px;
+    border-radius: 7px;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    .accordion-group {
+      width: 100%;
+    }
+  }
 }
