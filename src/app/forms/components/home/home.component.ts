@@ -8,7 +8,10 @@ import { LinkCard } from 'src/app/core';
 })
 export class HomeComponent implements OnInit {
   linkCards: LinkCard[] = [
-    {title: 'Validaciones condicionales', url: 'conditionalForms'}
+    {title: 'Validaciones condicionales', url: 'conditionalForms'},
+    {title: 'Selector personalizado', url: 'customSelection'},
+
+
   ];
 
   constructor() { }
