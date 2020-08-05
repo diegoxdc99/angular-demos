@@ -1,10 +1,46 @@
 .container {
-  border: blue 2px solid;
   .search {
-    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    outline: black 2px solid;
+    &--focus {
+      outline: blue 2px solid;
+    }
+
+    &-icon {
+      font-size: 1.5rem;
+      margin-right: 5px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      height: 40px;
+      margin: 5px 2px;
+      padding: 0 10px;
+      border-radius: 30px;
+      align-items: center;
+
+      &-description {
+        width: max-content;
+        margin-right: 5px;
+      }
+      &-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        background-color: #dddddd;
+        border-radius: 100%;
+      }
+    }
   }
 }
-
 
 .input-empty {
   box-sizing: content-box;
@@ -14,4 +50,44 @@
   outline: none;
   cursor: default;
   width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  .list {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 5px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    position: absolute;
+    width: 100%;
+    &-item {
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        line-height: 48px;
+        height: 48px;
+      }
+
+      &:hover {
+        background-color: gray;
+
+      &::before {
+        content: "+";
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        background-color: #dddddd;
+        border-radius: 100%;
+        margin-right: 5px;
+      }
+      }
+    }
+  }
 }

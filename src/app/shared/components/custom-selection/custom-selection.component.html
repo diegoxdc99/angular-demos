@@ -1,10 +1,20 @@
 <div class="container">
-  <div class="search">
-    <input class="input-empty" type="text" name="" id="">
+  <div class="search" [ngClass]="{'search--focus': showOptionList}" (click)="activeSearchInput()">
+    <fa-icon class="search-icon" [icon]="['fas', 'search']"></fa-icon>
+    <div @optionList class="search-item"  *ngFor="let list of selectedItems; let i = index">
+      <div class="search-item-description">{{list.text}}</div>
+      <fa-icon class="search-item-close" (click)="deleteSelectedItem(i)" [icon]="['fas', 'times']"></fa-icon>
+    </div>
+    <!-- <input #searchInput (focus)="enableOptionList()" (focusout)="disableOptionList()" class="input-empty" type="text" name="" id=""> -->
+    <input #searchInput (focus)="enableOptionList()" (focusout)="disableOptionList()" class="input-empty" type="text" name="" id="">
   </div>
-  <div class="search-list">
-    <div *ngFor="let list of searchLists">
-      {{list.text}}
+  <div class="wrapper">
+    <div click @optionList *ngIf="showOptionList" class="list">
+      <div class="list-item" *ngFor="let list of filterList" (mousedown)="addItem(list)">
+        <span >{{list.text}}</span>
+      </div>
     </div>
   </div>
+
+
 </div>
