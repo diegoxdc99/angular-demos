@@ -6,10 +6,23 @@ import { AccordionComponent } from './components/accordion/accordion.component';
 import { CustomSelectionComponent } from './components/custom-selection/custom-selection.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PaginatorDirective } from './components/paginator/paginator.directive';
+import { PageComponent } from './components/paginator/page/page.component';
 
 @NgModule({
-  declarations: [LinkCardComponent, AccordionComponent, CustomSelectionComponent, PaginatorDirective],
+  declarations: [
+    LinkCardComponent,
+    AccordionComponent,
+    CustomSelectionComponent,
+    PaginatorDirective,
+    PageComponent,
+  ],
   imports: [CommonModule, RouterModule, FontAwesomeModule],
-  exports: [LinkCardComponent, AccordionComponent, CustomSelectionComponent, PaginatorDirective],
+  exports: [
+    LinkCardComponent,
+    AccordionComponent,
+    CustomSelectionComponent,
+    PaginatorDirective,
+    PageComponent,
+  ],
 })
 export class SharedModule {}
