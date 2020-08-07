@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: () => import('./animations/animations.module').then(m => m.AnimationsModule)
       },
       {
+        path: 'reusable',
+        loadChildren: () => import('./reusable-components/reusable-components.module').then(m => m.ReusableComponentsModule)
+      },
+      {
         path: '**',
         redirectTo: '',
         pathMatch: 'full'
