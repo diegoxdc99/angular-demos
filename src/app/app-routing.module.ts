@@ -3,6 +3,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { ShowModulesComponent } from './components/show-modules/show-modules.component';
 import { PreloadService } from './core/services/preload.service';
+import { QuicklinkStrategy } from 'ngx-quicklink';
 
 const routes: Routes = [
   {
@@ -16,17 +17,17 @@ const routes: Routes = [
       {
         path: 'forms',
         loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule),
-        data: { preload: false}
+        // data: { preload: true}
       },
       {
         path: 'animations',
         loadChildren: () => import('./animations/animations.module').then(m => m.AnimationsModule),
-        data: { preload: true}
+        // data: { preload: true}
       },
       {
         path: 'reusable',
         loadChildren: () => import('./reusable-components/reusable-components.module').then(m => m.ReusableComponentsModule),
-        data: { preload: false}
+        // data: { preload: true}
       },
       {
         path: '**',
@@ -40,7 +41,10 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     // preloadingStrategy: PreloadAllModules // Use with discretion, not good when you have too many modules
-    preloadingStrategy: PreloadService // own strategy to load only certain modules
+    // preloadingStrategy: PreloadService // own strategy to load only certain modules
+    // enableTracing: false,
+    preloadingStrategy: QuicklinkStrategy, // Use viewport and routeLink to preload modules
+    // paramsInheritanceStrategy: 'always'
   })],
   exports: [RouterModule]
 })

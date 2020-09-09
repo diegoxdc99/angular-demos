@@ -7,6 +7,7 @@ import { CustomSelectionComponent } from './components/custom-selection/custom-s
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PaginatorDirective } from './components/paginator/paginator.directive';
 import { PageComponent } from './components/paginator/page/page.component';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,13 @@ import { PageComponent } from './components/paginator/page/page.component';
     PaginatorDirective,
     PageComponent,
   ],
-  imports: [CommonModule, RouterModule, FontAwesomeModule],
+  imports: [QuicklinkModule, CommonModule, RouterModule, FontAwesomeModule],
   exports: [
     LinkCardComponent,
     AccordionComponent,
     CustomSelectionComponent,
     PaginatorDirective,
-    PageComponent,
+    PageComponent
   ],
 })
 export class SharedModule {}
